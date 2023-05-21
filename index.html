@@ -36,61 +36,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen"
     />
-
-    <script>
-      (function (apiKey) {
-        (function (p, e, n, d, o) {
-          var v, w, x, y, z;
-          o = p[d] = p[d] || {};
-          o._q = o._q || [];
-          v = ["initialize", "identify", "updateOptions", "pageLoad", "track"];
-          for (w = 0, x = v.length; w < x; ++w)
-            (function (m) {
-              o[m] =
-                o[m] ||
-                function () {
-                  o._q[m === v[0] ? "unshift" : "push"](
-                    [m].concat([].slice.call(arguments, 0))
-                  );
-                };
-            })(v[w]);
-          y = e.createElement(n);
-          y.async = !0;
-          y.src = "https://cdn.pendo.io/agent/static/" + apiKey + "/pendo.js";
-          z = e.getElementsByTagName(n)[0];
-          z.parentNode.insertBefore(y, z);
-        })(window, document, "script", "pendo");
-
-        // This function creates anonymous visitor IDs in Pendo unless you change the visitor id field to use your app's values
-        // This function uses the placeholder 'ACCOUNT-UNIQUE-ID' value for account ID unless you change the account id field to use your app's values
-        // Call this function after users are authenticated in your app and your visitor and account id values are available
-        // Please use Strings, Numbers, or Bools for value types.
-        pendo.initialize({
-          visitor: {
-            id: "DARSHAN-VISITOR", // Required if user is logged in, default creates anonymous ID
-            // email:        // Recommended if using Pendo Feedback, or NPS Email
-            // full_name:    // Recommended if using Pendo Feedback
-            // role:         // Optional
-
-            // You can add any additional visitor level key-values here,
-            // as long as it's not one of the above reserved names.
-          },
-
-          account: {
-            id: "DARSHAN-ACCOUNT", // Required if using Pendo Feedback, default uses the value 'ACCOUNT-UNIQUE-ID'
-            name: "Darshan", // Optional
-            // is_paying:    // Recommended if using Pendo Feedback
-            // monthly_value:// Recommended if using Pendo Feedback
-            // planLevel:    // Optional
-            // planPrice:    // Optional
-            // creationDate: // Optional
-
-            // You can add any additional account level key-values here,
-            // as long as it's not one of the above reserved names.
-          },
-        });
-      })("43994d6b-66ea-49fc-71f1-31077e387150");
-    </script>
+    <script src="/pendo/pendo-initialization.js"></script>
   </head>
 
   <body>
@@ -291,23 +237,30 @@
     <!-- copyright section end-->
 
     <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/plugin.js"></script>
     <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.mCustomScrollbar.concat.min.js"
+    ></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     <!-- javascript -->
-    <script src="js/owl.carousel.js"></script>
-    <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+    ></script>
     <script>
       $(document).ready(function () {
         $(".fancybox").fancybox({
           openEffect: "none",
-          closeEffect: "none"
+          closeEffect: "none",
         });
+      });
     </script>
   </body>
 </html>
