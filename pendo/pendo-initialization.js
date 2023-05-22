@@ -349,6 +349,7 @@ const urlParams = new URLSearchParams(window.location.search),
                   "identify",
                   "updateOptions",
                   "pageLoad",
+                  "track"
                 ]).length;
               n < s;
               ++n
@@ -367,6 +368,7 @@ const urlParams = new URLSearchParams(window.location.search),
                 "https://cdn.pendo.io/agent/static/43994d6b-66ea-49fc-71f1-31077e387150/pendo.js"),
               (l = e.getElementsByTagName(a)[0]).parentNode.insertBefore(c, l);
           })(window, document, "script", "pendo"),
+
           pendo.initialize({
             visitor: {
               id: visitor || "VISITOR-UNIQUE-ID",
