@@ -1,5 +1,5 @@
 function sendMessageToIframe() {
-    window.parent.document.getElementById('iframe2').contentWindow.postMessage(message, '*');
+    window.parent.document.getElementById('iframe2').contentWindow.postMessage(message, 'https://softlandsite.netlify.app');
 }
 
 const discoverMoreBtn = document.getElementById('discver-more-btn');
